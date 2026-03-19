@@ -1155,6 +1155,11 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+lucide-react@^0.577.0:
+  version "0.577.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.577.0.tgz#8ae89edd8415f99c6319a38b40d9c513f6fa5062"
+  integrity sha512-4LjoFv2eEPwYDPg/CUdBJQSDfPyzXCRrVW1X7jrx/trgxnxkHFjnVZINbzvzxjN70dxychOfg+FTYwBiS3pQ5A==
+
 minimatch@^10.2.2:
   version "10.2.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-10.2.4.tgz#465b3accbd0218b8281f5301e27cedc697f96fde"
