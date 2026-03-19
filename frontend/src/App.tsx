@@ -84,7 +84,7 @@ export default function App() {
         ...fd.map((f:any)=>({id:f.id,name:f.name,type:"folder",parentId:f.parent_id??null,isOpen:false})),
         ...fid.map((f:any)=>({id:f.id,name:f.name,type:"file",ext:f.ext??f.name.split(".").pop()??"txt",size:formatSize(f.size??0),storage_path:f.storage_path,modified:formatDate(f.created_at),parentId:f.folder_id??null})),
       ]);
-    } catch { showToast("Impossible de contacter FastAPI",false); }
+    } catch { showToast("Impossible de contacter le serveur NadjCloud",false); }
     setLoading(false);
   };
 
@@ -196,7 +196,7 @@ export default function App() {
     <>
       <div className="sidebar-logo">
         <div className="logo-dot"/>
-        <span>FileVault</span>
+        <span>NadjCloud</span>
         <span className="api-pill">API</span>
       </div>
       <nav className="sidebar-nav">
@@ -237,7 +237,7 @@ export default function App() {
         ))}
         <div className="user-card" style={{marginTop:8}}>
           <div className="avatar">A</div>
-          <div><div className="user-name">Administrateur</div><div className="user-role">FastAPI · MySQL</div></div>
+          <div><div className="user-name">Administrateur</div><div className="user-role">NadjCloud · v1.0</div></div>
         </div>
       </div>
     </>
@@ -614,7 +614,7 @@ export default function App() {
                 <div className="avatar-lg">A</div>
                 <div>
                   <div style={{fontFamily:"var(--font-display)",fontSize:20,fontWeight:700}}>Administrateur</div>
-                  <div style={{color:"var(--muted)",fontSize:13,marginTop:4}}>admin@filevault.io</div>
+                  <div style={{color:"var(--muted)",fontSize:13,marginTop:4}}>admin@nadjcloud.io</div>
                   <div style={{display:"flex",gap:8,marginTop:10,flexWrap:"wrap"}}>
                     <span style={{background:"rgba(91,156,246,.15)",color:"var(--accent)",fontSize:11,fontWeight:700,padding:"3px 10px",borderRadius:99}}>Admin</span>
                     <span style={{background:"rgba(52,211,153,.15)",color:"var(--green)",fontSize:11,fontWeight:700,padding:"3px 10px",borderRadius:99}}>Actif</span>
